@@ -1,153 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Playfair+Display:ital@1&family=Train+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b5b92dc173.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="screen and (max-width :768px") href="css/mobile.css">
-    <title>Newsgrid | Latest News</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-</head>
-<body>
-    <nav id="main-nav">
-        <div class="container">
-            <img src="img/logo1.png" alt="Newsgrid" class="logo">
-            <div class="social">
-                    <a href="http"//facebook.com"><i class="fab fa-facebook fa-2x" target="_blank"></i></a>
-                    <a href="http"//twitter.com"><i class="fab fa-twitter fa-2x" target="_blank"></i></a>
-                    <a href="http"//instagram.com"><i class="fab fa-instagram fa-2x" target="_blank"></i></a>
-                    <a href="http"//youtube.com"><i class="fab fa-youtube fa-2x" target="_blank"></i></a>
-            </div>
+  <head>
+    <title>Loan Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <ul>
-                <li><a class="current" href="index.html">Home</a></li>
-                <li><a  href= "about.html">About</a></li>
-            </ul>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+     #loading, #results{ 
+      display: none;
+    }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <form id="loan-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">%</span>
+                  <input type="number" class="form-control" id="interest" placeholder="Interest">
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+              </div>
+              <div class="forn-group">
+                <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+              </div>
+            </form>
+            <!-- LOADER -->
+            
+            <div id="loading">
+              <img src="image/loading.gif" alt="">
+            </div>
+          
+            <!-- RESULTS -->
+            <div id="results" class="pt-4">
+              <h5>Results</h5>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Monthly Payment</span>
+                  <input type="number" class="form-control" id="monthly-payment" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Total Payment</span>
+                  <input type="number" class="form-control" id="total-payment" disabled>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Total Interest</span>
+                  <input type="number" class="form-control" id="total-interest" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <!-- Showcase -->
-    <header id="showcase">
-        <div class="container">
-            <div class="showcase-container">
-                <div class="showcase-content">
-                    <div class="category category-sports">Sports</div>
-                        <h1>Some Sports Article</h1>
-                        </h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus obcaecati nesciunt enim eaque ducimus assumenda incidunt asperiores velit distinctio aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quas.</p>
-                        <a href="article.html" class="btn btn-primary">Read More</a>
-                    
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Home Articles -->
-        <section id="home-articles" class="py-2">
-            <div class="container">
-            <h2>Editor Picks</h2>
-            <div class="article-container">
-                <article class="card">
-                    <img src="img/Articles/Ent1.jpg" alt=""> 
-                <div class="category category-ent">Entertainment</div>
-                <h3>
-                    <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                </article>
-                <article class="card bg-primary">
-                <div class="category category-sports">Sports</div>
-                <h3>
-                    <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                </article>
-                <article class="card">
-                    <img src="img/Articles/tech1.jpg" alt="">
-                <div class="category category-tech">Technology</div>
-                <h3>
-                    <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                </article>
-                <article class="card">    
-                <div class="category category-sports">Sports</div>
-                <h3>
-                    <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                <img src="img/Articles/Sports1.jpg" alt="">
-                </article>
-                <article class="card">
-                    <img src="img/Articles/tech2.jpg" alt="">
-                <div class="category category-tech">Technology</div>
-                <h3>
-                    <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                </article>
-                <article class="card bg-primary">
-                    <div class="category category-sports">Sports</div>
-                    <h3>
-                        <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                    </article>
-                    <article class="card">    
-                        <div class="category category-sports">Sports</div>
-                        <h3>
-                            <a href="article.html">Lorem ipsum dolor sit amet.</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam soluta ratione nisi saepe, facere possimus laudantium voluptatum optio aliquid commodi.</p>
-                        <img src="img/Articles/Sports2.jpg" alt="">
-                        </article>
-                    
-            </div>
-        </div>
-        </section>
-
-        <!-- Footer -->
-
-        <footer id="main-footer">
-            <div class="container footer-container">
-                <div>
-                    <img src="img/logo1.png" alt="Newsgrid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsam quasi dicta temporibus consectetur, quibusdam enim ipsa at consequatur libero!</p>
-                </div>
-                <div>
-                    <h3>Email Newsletter</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-                    <form>
-                        <input type="email" placeholder="Enter Email....">
-                        <input type="Submit" value="Subscribe" class="btn btn-primary">
-                    </form>
-                </div>
-                <div>
-                    <h3>Site Links</h3>
-                    <ul class="lists">
-                        <li><a href="#">Help and Support</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Join Our Club</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, minima.</p>
-                    <a href="#" class="btn btn-secondary">Join Now</a>
-                </div>
-                <div>
-                    <p>
-                        Copyright &copy; 2019,  All Roghts Reserved
-                    </p>
-                </div>
-
-            </div>
-        </footer>
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
